@@ -11,6 +11,12 @@
   " rel="stylesheet" />
 
   <title>Snackbar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <body>
@@ -18,6 +24,28 @@
     <a href="./index.html">Go to home</a>
 
   </section>
+
+  <form class="form">
+    <label>
+      Delay (ms)
+      <input type="number" name="delay" required />
+    </label>
+
+    <fieldset>
+      <legend>State</legend>
+      <label>
+        <input type="radio" name="state" value="fulfilled" required />
+        Fulfilled
+      </label>
+      <label>
+        <input type="radio" name="state" value="rejected" required />
+        Rejected
+      </label>
+    </fieldset>
+
+    <button type="submit">Create notification</button>
+  </form>
+  <script type="module" src="./js/2-snackbar.js"></script>
 </body>
 
 </html>
