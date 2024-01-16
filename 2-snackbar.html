@@ -11,6 +11,17 @@
   " rel="stylesheet" />
 
   <title>Snackbar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  
+  <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers2.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js">
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-651d7991.js">
+  <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-80d0dc0f.css">
+  <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-2309c830.css">
 </head>
 
 <body>
@@ -18,6 +29,28 @@
     <a href="./index.html">Go to home</a>
 
   </section>
+
+  <form class="form">
+    <label>
+      Delay (ms)
+      <input type="number" name="delay" required />
+    </label>
+
+    <fieldset>
+      <legend>State</legend>
+      <label>
+        <input type="radio" name="state" value="fulfilled" required />
+        Fulfilled
+      </label>
+      <label>
+        <input type="radio" name="state" value="rejected" required />
+        Rejected
+      </label>
+    </fieldset>
+
+    <button type="submit">Create notification</button>
+  </form>
+  
 </body>
 
 </html>
