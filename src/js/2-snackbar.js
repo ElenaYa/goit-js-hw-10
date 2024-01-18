@@ -10,17 +10,17 @@ form.addEventListener('submit', onGeneratePromise);
 
 function onGeneratePromise(event) {
     event.preventDefault();
-    const delay = form.delay.value;
+    const delayInput = form.delay.value;
     const userChoice = form.state.value;
 
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
              if (userChoice === 'fulfilled') {
-        resolve(delay);
+        resolve(delayInput);
       } else if (userChoice === 'rejected') {
-        reject(delay);
+        reject(delayInput);
       }
-    }, delay);
+    }, delayInput);
    
     });
     promise
@@ -40,9 +40,10 @@ function onGeneratePromise(event) {
                 position: 'topCenter',
                 titleColor: '#FFF',
                 titleSize: '16px',
-    messageColor: '#FFF',
+                messageColor: '#FFF',
                 messageSize: '16px',
-     backgroundColor: '#EF4040',
+                backgroundColor: '#EF4040',
             }));
+    form.reset();
     input.value = '';
 }

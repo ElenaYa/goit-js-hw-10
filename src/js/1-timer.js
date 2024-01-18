@@ -35,7 +35,7 @@ const options = {
                 messageSize: '16px',
                 backgroundColor: '#EF4040',
       });
-            button.disabbled = true;
+            button.disabled = true;
         } else {
             button.disabled = false;
       }
@@ -66,12 +66,11 @@ function onStartTimer() {
     minsTimer.textContent = pad(minutes);
     secsTimer.textContent = pad(seconds);
 
-    if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 0) {
+    if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 0 || different <= 0) {
       clearInterval(timer);
     }
   }, 1000);
 }
-
 
 function pad(value) {
   return String(value).padStart(2, '0');
@@ -93,8 +92,5 @@ function convertMs(ms) {
   // Remaining seconds
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
 
-    return { days, hours, minutes, seconds };
-    console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
-console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
-console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
+  return { days, hours, minutes, seconds };
 }
